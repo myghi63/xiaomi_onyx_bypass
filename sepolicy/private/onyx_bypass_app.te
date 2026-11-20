@@ -22,6 +22,17 @@ allow onyx_bypass_app display_service:service_manager find;
 allow onyx_bypass_app power_service:service_manager find;
 allow onyx_bypass_app thermal_service:service_manager find;
 
+# Service lookups every UI process makes: ActivityThread/ViewRootImpl resolve these
+# when an activity is created, and a denied find just nulls the manager behind it.
+allow onyx_bypass_app app_function_service:service_manager find;
+allow onyx_bypass_app autofill_service:service_manager find;
+allow onyx_bypass_app content_capture_service:service_manager find;
+allow onyx_bypass_app hint_service:service_manager find;
+allow onyx_bypass_app protolog_configuration_service:service_manager find;
+allow onyx_bypass_app sensitive_content_protection_service:service_manager find;
+allow onyx_bypass_app uimode_service:service_manager find;
+allow onyx_bypass_app voiceinteraction_service:service_manager find;
+
 allow onyx_bypass_app system_app_data_file:dir create_dir_perms;
 allow onyx_bypass_app system_app_data_file:file create_file_perms;
 allow onyx_bypass_app system_app_data_file:lnk_file create_file_perms;
