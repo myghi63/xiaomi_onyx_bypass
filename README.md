@@ -36,7 +36,7 @@ Any device tree picks it up with one manifest entry and two lines — without th
 device builds clean and simply has no bypass:
 
 ```xml
-<project name="onyx_bypass" path="vendor/onyxbypass" remote="myghi63" revision="main" />
+<project name="xiaomi_onyx_bypass" path="vendor/onyxbypass" remote="myghi63" revision="main" />
 ```
 
 ```mk
