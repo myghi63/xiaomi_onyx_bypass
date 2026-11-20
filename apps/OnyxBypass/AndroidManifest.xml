@@ -33,6 +33,34 @@
             android:name=".thermal.ThermalService"
             android:exported="false" />
 
+        <service
+            android:name=".charge.BypassTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_charge_bypass"
+            android:label="@string/bypass_now_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.action.QS_TILE_DETAILS_ACTIVITY"
+                android:value=".charge.ChargeSettingsActivity" />
+        </service>
+
+        <service
+            android:name=".charge.BypassGamingTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_charge_bypass"
+            android:label="@string/bypass_gaming_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.action.QS_TILE_DETAILS_ACTIVITY"
+                android:value=".charge.ChargeSettingsActivity" />
+        </service>
+
         <activity
             android:name=".charge.ChargeSettingsActivity"
             android:exported="true"

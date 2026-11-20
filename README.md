@@ -19,6 +19,8 @@ HDR) stays in the device tree.
   crosses 20 % again.
 - UI: `CollapsingToolbarBaseActivity` + androidx preferences (`SettingsBasePreferenceFragment`),
   same look as the LineageOS settings pages.
+- Quick settings tiles (`BypassTileService`, `BypassGamingTileService`): mirror the "Bypass now"
+  and "Bypass while gaming" switches, same guards and refusal toast; long press opens the page.
 
 ## Settings.System keys
 
